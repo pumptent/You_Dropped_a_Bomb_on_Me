@@ -1,11 +1,11 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{933F1E5E-2F16-39B3-FF00-96EF96A06EA9}") = "You_Dropped_a_Bomb_on_Me", "Assembly-CSharp-firstpass.csproj", "{BE26A1AA-219A-F9CA-3E04-7EA4AEDCF5CB}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "You_Dropped_a_Bomb_on_Me", "Assembly-CSharp-firstpass.csproj", "{BE26A1AA-219A-F9CA-3E04-7EA4AEDCF5CB}"
 EndProject
-Project("{933F1E5E-2F16-39B3-FF00-96EF96A06EA9}") = "You_Dropped_a_Bomb_on_Me", "Assembly-CSharp.csproj", "{D198ACA4-A422-E365-776C-04A39649C84C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "You_Dropped_a_Bomb_on_Me", "Assembly-CSharp.csproj", "{D198ACA4-A422-E365-776C-04A39649C84C}"
 EndProject
-Project("{933F1E5E-2F16-39B3-FF00-96EF96A06EA9}") = "You_Dropped_a_Bomb_on_Me", "Assembly-CSharp-Editor-firstpass.csproj", "{0070149D-157F-3542-F5E1-88DD1DC21620}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "You_Dropped_a_Bomb_on_Me", "Assembly-CSharp-Editor-firstpass.csproj", "{0070149D-157F-3542-F5E1-88DD1DC21620}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
