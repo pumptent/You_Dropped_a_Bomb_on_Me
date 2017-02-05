@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Bomb_01.unity
+- path: Assets/Rear_Window_01.unity
   isLoaded: 1
   isActive: 1
