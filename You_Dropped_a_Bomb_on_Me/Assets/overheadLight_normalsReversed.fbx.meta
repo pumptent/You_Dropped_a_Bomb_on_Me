@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c055f7601d37c0a4b8cde56375c5438e
-timeCreated: 1486256050
+guid: 84757955ccc40ab49b192e1a707de27e
+timeCreated: 1486662673
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: TV
+    4300000: overheadLight
     9500000: //RootNode
   materials:
     importMaterials: 1
