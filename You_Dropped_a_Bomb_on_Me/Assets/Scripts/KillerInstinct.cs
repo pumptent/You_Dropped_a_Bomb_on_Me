@@ -8,9 +8,11 @@ public class KillerInstinct : MonoBehaviour {
     public GameObject myVictim;
     public GameObject watcher;
     public int speed;
-    
-	// Use this for initialization
-	void Start () {
+    private GameObject lights;
+
+    // Use this for initialization
+    void Start () {
+        lights = GameObject.FindGameObjectWithTag("Lights");
         victims = GameObject.FindGameObjectsWithTag("Victim");
         watcher = GameObject.FindGameObjectWithTag("Player");
         numberOfVictims = victims.Length;
@@ -22,12 +24,17 @@ public class KillerInstinct : MonoBehaviour {
         transform.position = Vector3.MoveTowards(transform.position, myVictim.transform.position, speed * Time.deltaTime);
     }
 
+    public void lightsOn()
+    {
+        if(lights != null)
+            lights.SetActive(true);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         
         if (collision.gameObject.tag.Equals("Victim"))
         {
-
             if (!gameObject.GetComponent<Renderer>().isVisible || !watcher.GetComponent<PlayerZoom>().zoomed)
             {
                 collision.gameObject.SetActive(false);
@@ -44,7 +51,22 @@ public class KillerInstinct : MonoBehaviour {
             {
                 int nextVictim = Mathf.RoundToInt(Random.Range(0, numberOfVictims));
                 myVictim = victims[nextVictim];
-                transform.position = new Vector3(transform.position.x, myVictim.transform.position.y, transform.position.z);
+                if(transform.position.y + 2 < myVictim.transform.position.y - 1 || transform.position.y + 2 > myVictim.transform.position.y + 1)
+                {
+                    GameObject lights = GameObject.FindGameObjectWithTag("Lights");
+                    if(lights != null)
+                    {
+                        lights.SetActive(false);
+                        Invoke("lightsOn", .5f);
+                    }
+                        
+                    transform.position = new Vector3(transform.position.x, myVictim.transform.position.y + 2, transform.position.z);
+                    
+                }
+                else
+                {
+                    Debug.Log(transform.position + " " + myVictim.transform.position);
+                }
             }
         }
     }
